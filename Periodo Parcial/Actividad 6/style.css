@@ -1,0 +1,26 @@
+/*
+.row {
+    background-color: orange;
+    font-size: 20px;
+    margin: 5px;
+}
+
+.col-3 {
+    background-color: aquamarine;
+    font-size: 20px;
+    padding: 5px;
+    margin: 2px;
+}
+*/
+
+.container {
+    background-color: purple;
+    color: white;
+    font-size: 50px;
+}
+
+.contenedor-fluido {
+    background-color: purple;
+    color: white;
+    font-size: 50px;
+}

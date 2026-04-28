@@ -1,0 +1,42 @@
+// const titulo = document.getElementById("titulo") as HTMLElement;
+// console.log(titulo);
+
+// const contenedor = document.getElementsByClassName("contenedor") as HTMLCollectionOf<HTMLElement>;
+// console.log(contenedor);
+
+// const items = document.getElementsByTagName("li") as HTMLCollectionOf<HTMLElement>;
+// console.log(items);
+
+// const titulo = document.querySelectorAll(".item-color1") as NodeListOf<HTMLElement>;
+// console.log(titulo);
+
+// const titulo = document.querySelector(".item-color1") as HTMLElement;
+// titulo.innerText = "Nuevo título";
+// titulo.style.color = "red";
+
+// const ul = document.getElementsByTagName("ul")[0] as HTMLUListElement;
+// console.log(ul[0].innerText);
+// console.log(ul[0].innerHTML);
+// console.log(ul[0].textContent);
+
+
+// const ancla = document.querySelector("a") as HTMLAnchorElement;
+// console.log(ancla.getAttribute("href"));
+// ancla.setAttribute("href", "https://www.google.com");
+
+const container = document.getElementsByClassName("contenedor") as HTMLCollectionOf<HTMLElement>;
+console.log(container);
+console.log(container[0].classList.contains("items-color1"));
+container[0].classList.add("nuevo-estilo");
+console.log(container[0].classList);
+container[0].classList.remove("nuevo-estilo");
+console.log(container[0].classList);
+
+
+const listaItems = document.getElementsByTagName("ul") as HTMLCollectionOf<HTMLElement>;
+const item = document.createElement("li") as HTMLLIElement;
+item.innerText = "Nuevo Item";
+item.classList.add("item-color1");
+listaItems[0].appendChild(item);
+
+

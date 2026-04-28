@@ -1,0 +1,48 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    background-color: aquamarine;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+
+.contenedor {
+    background-color: blueviolet;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+    display: flex;
+    width: 400px;
+}
+
+h1 {
+    color: white;
+    font-size: 3em;
+}
+
+ul {
+    text-decoration: none;
+    list-style: none;
+
+}
+
+li {
+    font-size: 2em;
+    display: flex;
+    margin: 10px;
+}
+
+
+.item-color1 {
+    background-color: red;
+}

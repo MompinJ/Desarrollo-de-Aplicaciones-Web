@@ -1,0 +1,167 @@
+/* PokemonCard.css */
+
+/* --- ESTRUCTURA BASE DE LA CARTA --- */
+.pokemon-card-container {
+  width: 320px;
+  height: 450px;
+  border-radius: 18px;
+  border: 12px solid #f0d860;
+  background: #f8f8f8;
+  padding: 10px;
+  box-shadow: 10px 10px 20px rgba(0,0,0,0.5);
+  position: relative;
+  font-family: 'Arial Narrow', sans-serif;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+
+/* --- COLORES DINAMICOS POR TIPO --- */
+.fire { background: linear-gradient(135deg, #ff9d55 0%, #ff5555 100%); }
+.water { background: linear-gradient(135deg, #5599ff 0%, #3366bb 100%); }
+.grass { background: linear-gradient(135deg, #77cc55 0%, #44aa22 100%); }
+.electric { background: linear-gradient(135deg, #ffee55 0%, #ffcc00 100%); }
+.psychic { background: linear-gradient(135deg, #ff55cc 0%, #aa3399 100%); }
+.fighting { background: linear-gradient(135deg, #cc5544 0%, #993322 100%); }
+.dark { background: linear-gradient(135deg, #775544 0%, #443322 100%); }
+.steel { background: linear-gradient(135deg, #aabbcc 0%, #778899 100%); }
+.fairy { background: linear-gradient(135deg, #ffaaee 0%, #ff77cc 100%); }
+.normal { background: linear-gradient(135deg, #ddccaa 0%, #bbaa88 100%); }
+.ground { background: linear-gradient(135deg, #ddbb55 0%, #aa8822 100%); }
+.rock { background: linear-gradient(135deg, #bbbb66 0%, #888833 100%); }
+.poison { background: linear-gradient(135deg, #aa55cc 0%, #662288 100%); }
+.bug { background: linear-gradient(135deg, #aabb22 0%, #778811 100%); }
+.ghost { background: linear-gradient(135deg, #7766aa 0%, #443366 100%); }
+.ice { background: linear-gradient(135deg, #77ddff 0%, #33aadd 100%); }
+.dragon { background: linear-gradient(135deg, #7766ee 0%, #4433bb 100%); }
+
+/* --- INTERIOR DE LA CARTA --- */
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 1.4rem;
+  padding: 4px 8px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 5px;
+}
+
+.name {
+  text-transform: capitalize;
+  color: #111;
+  text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+}
+
+.hp-container {
+  color: #d32f2f;
+}
+
+.hp-container small {
+  font-size: 0.8rem;
+  color: #333;
+}
+
+.image-frame {
+  background: linear-gradient(to bottom, #eeeeee, #ffffff);
+  border: 4px solid #b8b8b8;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.2), 2px 2px 5px rgba(0,0,0,0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 180px;
+  overflow: hidden;
+}
+
+.pokemon-image {
+  width: 100%;
+  max-height: 160px;
+  object-fit: contain;
+  filter: drop-shadow(4px 4px 6px rgba(0,0,0,0.4));
+}
+
+.stats-bar {
+  background: linear-gradient(to right, #d1d1b8, #e5e5cc, #d1d1b8);
+  font-size: 0.75rem;
+  font-style: italic;
+  padding: 4px;
+  text-align: center;
+  border: 1px solid #999;
+  margin-top: 5px;
+  color: #333;
+}
+
+.abilities-section {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+.ability {
+  border-bottom: 1px solid rgba(0,0,0,0.2);
+  padding: 8px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.ability:last-child {
+  border-bottom: none;
+}
+
+.ability-name {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.1rem;
+  color: #222;
+}
+
+.damage {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #111;
+}
+
+/* --- EFECTO HOLOGRAFICO --- */
+.pokemon-card-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    115deg,
+    transparent 20%,
+    rgba(255, 255, 255, 0.4) 25%,
+    rgba(255, 215, 0, 0.3) 45%,
+    rgba(255, 0, 0, 0.2) 50%,
+    rgba(0, 255, 255, 0.3) 55%,
+    rgba(255, 255, 255, 0.4) 75%,
+    transparent 80%
+  );
+  background-size: 200% 200%;
+  mix-blend-mode: color-dodge;
+  opacity: 0;
+  transition: opacity 0.3s ease, background-position 0.3s ease;
+  pointer-events: none; 
+  z-index: 10;
+}
+
+.pokemon-card-container:hover::before {
+  opacity: 1;
+  background-position: 100% 100%;
+  animation: holoSparkle 3s ease infinite alternate;
+}
+
+@keyframes holoSparkle {
+  0% { background-position: 0% 0%; }
+  100% { background-position: 100% 100%; }
+}
