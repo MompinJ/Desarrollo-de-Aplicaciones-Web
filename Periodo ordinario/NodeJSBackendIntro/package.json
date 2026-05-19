@@ -1,0 +1,19 @@
+{
+  "name": "nodejs-backend-intro",
+  "version": "1.0.0",
+  "description": "API REST de animes construida con Node.js y Express",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MompinJ <wong.javier@tnghph.com.mx>",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

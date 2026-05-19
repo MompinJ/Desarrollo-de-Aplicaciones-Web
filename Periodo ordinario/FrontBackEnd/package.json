@@ -1,0 +1,19 @@
+{
+  "name": "front-back-end",
+  "version": "1.0.0",
+  "description": "Conexion de frontend con backend Express",
+  "main": "server.js",
+  "scripts": {
+    "start":"nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MompinJ <wong.javier@tnghph.com.mx>",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}

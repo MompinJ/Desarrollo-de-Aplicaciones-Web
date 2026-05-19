@@ -1,0 +1,21 @@
+{
+  "name": "front-back-end-postgres",
+  "version": "1.0.0",
+  "description": "Front y backend con Supabase PostgreSQL",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "MompinJ <wong.javier@tnghph.com.mx>",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.100.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.14"
+  }
+}
